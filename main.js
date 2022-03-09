@@ -51,7 +51,7 @@ const fetchIssues = () => {
     issuesList.innerHTML +=   `<div class="well">
                               <h6>Issue ID: ${id} </h6>
                               <p><span class="label label-info"> ${status} </span></p>
-                              <h3 class="" id="issueDetail${id}"> ${description} </h3>
+                              <h3 class="${status== 'Closed'? 'line':''}" id="issueDetail${id}"> ${description} </h3>
                               <p><span class="glyphicon glyphicon-time"></span> ${severity}</p>
                               <p><span class="glyphicon glyphicon-user"></span> ${assignedTo}</p>
                               <button onclick="setStatusClosed(event, ${id})" class="btn btn-warning">Close</button>
